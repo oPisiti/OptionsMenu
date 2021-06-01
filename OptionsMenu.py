@@ -36,10 +36,14 @@ def OptionsMenu(opt, greeting = "Choose an Option:"):
 
         if stroke == 72:        # Up
             if choice > 0:
-                choice -= 1            
+                choice -= 1 
+            else:
+                choice = len(opt) - 1          
         elif stroke == 80:      # Down
             if choice < len(opt) - 1:
                 choice +=1
+            else:
+                choice = 0
         elif stroke == 13:      # Enter
             return opt[choice]
 
